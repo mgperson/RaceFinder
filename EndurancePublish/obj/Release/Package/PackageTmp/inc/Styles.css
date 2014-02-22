@@ -1,0 +1,24 @@
+﻿body {
+    color:blue;
+}
+
+.information {    
+    height: 250px;
+    width: 400px;
+    font-size: 0.8em;
+    overflow: auto;
+    font-family:sans-serif
+}
+
+#divSearching {
+    padding:30px;
+}
+
+.raceImage {
+    height:50px;
+    width:50px;
+}
+
+.title {
+
+}

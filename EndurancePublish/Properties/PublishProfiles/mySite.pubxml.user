@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAICnxFBdou0qWcJ+FB75jMQAAAAACAAAAAAAQZgAAAAEAACAAAABcT90SilhhIQVxITDrdufWWtOiJNUQk+iYk0kw4ZscSgAAAAAOgAAAAAIAACAAAADQVbpBCwRbu+dMWAMcg34urox6O4T0f+vMHoGWQUhABiAAAACIvN1Q8aGWbfl3YpslObV7hQcL5qMuqrjxD42D7/9Ep0AAAADyJTVTaAamnL27/7JQci6Ak1t1rEzVmzyWtvya+4nggNqzkE3HjefM0tShqPeCvg3WbE8VS44nJJhT0V0J+jlX</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="BackgroundProcess.aspx">
+      <publishTime>02/21/2014 04:38:15</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/21/2014 04:34:28</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>02/21/2014 04:34:30</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.UI.Combined.dll">
+      <publishTime>02/21/2014 04:34:31</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>02/21/2014 04:34:46</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>02/21/2014 04:34:43</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>02/21/2014 04:34:44</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>02/21/2014 04:34:44</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>02/21/2014 04:34:45</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>02/21/2014 04:34:45</publishTime>
+    </File>
+    <File Include="bin/EndurancePublish.dll">
+      <publishTime>02/21/2014 04:49:08</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/21/2014 04:34:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Membership.OpenAuth.dll">
+      <publishTime>02/21/2014 04:34:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
+      <publishTime>02/21/2014 04:34:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
+      <publishTime>02/21/2014 04:34:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
+      <publishTime>02/21/2014 04:34:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>02/21/2014 04:34:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/21/2014 04:34:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>02/21/2014 04:34:28</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>02/21/2014 04:34:28</publishTime>
+    </File>
+    <File Include="Bundle.config">
+      <publishTime>02/21/2014 04:34:21</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>02/21/2014 04:38:25</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>02/21/2014 04:34:21</publishTime>
+    </File>
+    <File Include="inc/jquery-1.11.0.min.js">
+      <publishTime>02/21/2014 04:40:13</publishTime>
+    </File>
+    <File Include="inc/Styles.css">
+      <publishTime>02/21/2014 04:40:13</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/21/2014 04:34:49</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>02/21/2014 04:34:21</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/21/2014 12:00:54</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
