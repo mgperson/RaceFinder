@@ -27,3 +27,4 @@ C:\Users\Owner\Documents\Visual Studio 2012\Projects\EndurancePublish\EnduranceP
 C:\Users\Owner\Documents\Visual Studio 2012\Projects\EndurancePublish\EndurancePublish\bin\DotNetOpenAuth.AspNet.xml
 C:\Users\Owner\Documents\Visual Studio 2012\Projects\EndurancePublish\EndurancePublish\obj\Release\EndurancePublish.dll
 C:\Users\Owner\Documents\Visual Studio 2012\Projects\EndurancePublish\EndurancePublish\obj\Release\EndurancePublish.pdb
+C:\Users\Owner\Documents\Visual Studio 2012\Projects\EndurancePublish\EndurancePublish\obj\Release\EndurancePublish.csprojResolveAssemblyReference.cache

@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BackgroundProcess.aspx" />
+    <Content Include="inc\female-legs-silhouette-running-sunset-bay-area-300x200.jpg" />
     <Content Include="inc\jquery-1.11.0.min.js" />
     <Content Include="inc\Styles.css" />
     <Content Include="packages.config" />

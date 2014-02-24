@@ -59,6 +59,8 @@ public partial class Default2 : System.Web.UI.Page
         string nodeRegistrationURL = string.Empty;
         string nodeCity = string.Empty;
         string nodeAddress = string.Empty;
+        string nodeLatitude = string.Empty;
+        string nodeLongitude = string.Empty;
 
         XmlDocument xmlDocument = new XmlDocument();
 
@@ -86,14 +88,22 @@ public partial class Default2 : System.Web.UI.Page
             XmlNode xmlNodeaddress = metaNode.SelectSingleNode("address");
             if (xmlNodeaddress != null) nodeAddress = xmlNodeaddress.InnerText;
 
+            XmlNode xmlNodelatitude = metaNode.SelectSingleNode("latitude");
+            if (xmlNodelatitude != null) nodeLatitude = xmlNodelatitude.InnerText;
 
-            racesHTML.Append("<div id='race" + (raceNumber++).ToString() + "' style='display:none'>");
+            XmlNode xmlNodelongitude = metaNode.SelectSingleNode("longitude");
+            if (xmlNodelongitude != null) nodeLongitude = xmlNodelongitude.InnerText;
+
+
+            racesHTML.Append("<div id='race" + (raceNumber).ToString() + "' style='display:none'>");
             racesHTML.Append("<span class='title'>" + nodeTitle + "</span>");
             racesHTML.Append("<img class='raceImage' src='" + nodeImageURL + "' alt='" + nodeTitle + "' />");
             racesHTML.Append("<div class='title'>" + nodeAddress + nodeCity + "</div>");
             racesHTML.Append("<div class='information'>" + nodeDescription + "</div>");
-            racesHTML.Append("<a href='" + nodeRegistrationURL + "' target='blank'>Register Now!</a>");
+            racesHTML.Append("<a href='" + nodeRegistrationURL + "' target='blank'>Register Now!</a>");            
             racesHTML.Append("</div>");
+            racesHTML.Append("<span id='longitude" + (raceNumber).ToString() + "' style='display:none'>" + nodeLongitude + "</span>");
+            racesHTML.Append("<span id='latitude" + (raceNumber++).ToString() + "' style='display:none'>" + nodeLatitude + "</span>");
         }
 
         return racesHTML.ToString();

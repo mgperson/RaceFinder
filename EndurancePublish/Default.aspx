@@ -10,19 +10,17 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true">
         
     </script>
-    <article>
-
-    </article>
+    
     <script type="text/javascript">
         var lat = "";
         var long = "";
+        var map = "";
         navigator.geolocation.getCurrentPosition(success);        
         var curRace = 0;
+        var markers = [];
 
 
-        function SendAjax(webPageName, queryParams, triggerFunction) {
-            //alert(webPageName);            
-            //queryParams = encodeURIComponent(queryParams);
+        function SendAjax(webPageName, queryParams, triggerFunction) {           
 
             queryParams = queryParams.replace(/%26%23/g, '%26 %23');
             queryParams = queryParams.replace(/%23%26/g, '%23 %26');
@@ -59,32 +57,63 @@
         }
 
         function GetPreviousRace() {
+            var marker = markers[curRace];
+            marker.setMap(null);
             $("#race" + curRace + "").hide();
             curRace = curRace - 1;
             if (curRace == -1) curRace = 0;
             $("#race" + curRace + "").show();
+
+            AddMapMarker(curRace);
         }
 
         function GetNextRace() {
+            markers[curRace].setMap(null)
             $("#race" + curRace + "").hide();
             curRace = curRace + 1;
             $("#race" + curRace + "").show();
+
+            AddMapMarker(curRace);
+        }
+
+        function AddMapMarker(curRace) {
+            var latitude = $('#latitude' + curRace).text();
+            var longitude = $('#longitude' + curRace).text();
+            var categoryType = $('#selectValue option:selected').text();
+
+            var coords = new google.maps.LatLng(latitude, longitude);
+
+            var marker = new google.maps.Marker({
+                position: coords,
+                map: map,
+                title: categoryType
+            });
+
+            markers[curRace] = marker;
         }
 
         function SearchRacesTriggered(response) {
+            if(markers[curRace] != null) markers[curRace].setMap(null);
             $("#divRaceResults").html(response);
             $("#race0").show();
+
+            AddMapMarker(0);
         }
     </script>
 </head>
+
 <body>
     <form id="form1" runat="server">
-    <div>                    
-        <div id="divCurrentLocation">  
-            Current Location          
+    <div class="mainSection">                    
+        <h1>Endurance Race Finder</h1>
+        <div id="divCurrentLocation">              
+            <h2>Location:</h2>
+            <article>
+
+    </article>
         </div>
         <div id="divSearching">
-            <div>Please select a race category to search for.</div>
+            <div><h2>Select a race category to search for:</h2></div>
             <select id="selectValue">
                 <option value="Marathon">Marathon</option>
                 <option value="Half-Marathon">Half-Marathon</option>
@@ -109,15 +138,15 @@
     function success(position) {
         var mapcanvas = document.createElement('div');
         mapcanvas.id = 'mapcontainer';
-        mapcanvas.style.height = '200px';
-        mapcanvas.style.width = '200px';
+        mapcanvas.style.height = '300px';
+        mapcanvas.style.width = '300px';
 
         document.querySelector('article').appendChild(mapcanvas);
 
         var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
         var options = {
-            zoom: 15,
+            zoom: 7,
             center: coords,
             mapTypeControl: false,
             navigationControlOptions: {
@@ -125,7 +154,7 @@
             },
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
+        map = new google.maps.Map(document.getElementById("mapcontainer"), options);
 
         var marker = new google.maps.Marker({
             position: coords,
